@@ -1,0 +1,16 @@
+.userContainer{
+    display: flex;
+    position: relative;
+    left: 2rem;
+    top: 3rem;
+    flex-direction: column;
+    font-weight: bold;
+    background-color: white;
+    width: 50%;
+    gap: 1rem;
+    z-index: 1;
+}
+
+li{
+    list-style: none;
+}

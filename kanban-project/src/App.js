@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import Board from "./components/Board/Board";
 import "./App.css";
+import ResponsiveAppBar from "./components/Navbar/Navbar";
 import Editable from "./components/Editable/Editable";
 
 function App() {
@@ -121,7 +122,7 @@ function App() {
   return (
     <div className="app">
       <nav className="navbar">
-        <h1>Kanban Board</h1>
+      <ResponsiveAppBar/>
       </nav>
       <div className="app_boards_container">
         <div className="app_boards">
