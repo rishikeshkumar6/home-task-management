@@ -29,7 +29,7 @@ To get started with the project, follow these steps:
 2. Navigate to the project directory: `cd kanban-board`
 3. Install the dependencies: `npm install`
 4. Start the development server: `npm start`
-5. Open your browser and visit `http://localhost:3000` to see the application.
+5. Open your browser and visit `https://home-task-management.netlify.app/register` to see the application.
 
 ## Acknowledgments
 
