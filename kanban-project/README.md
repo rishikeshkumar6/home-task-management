@@ -25,7 +25,7 @@ This project is a Kanban board application developed using React JS. It allows u
 
 To get started with the project, follow these steps:
 
-1. Clone the repository: `git clone https:https://github.com/shivu317/Project-2-Kanban
+1. Clone the repository: `git clone https://github.com/rishikeshkumar6/home-task-management.git
 2. Navigate to the project directory: `cd kanban-board`
 3. Install the dependencies: `npm install`
 4. Start the development server: `npm start`
