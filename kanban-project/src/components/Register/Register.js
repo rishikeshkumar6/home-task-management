@@ -39,6 +39,7 @@ export default function Register() {
     email:"",
     password:""
   })
+  const [Error,setError]=useState(false)
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -57,6 +58,10 @@ export default function Register() {
 
   const handleSignup=async (e)=>{
       e.preventDefault()
+       if(!Input.name || !Input.email || !Input.password){
+     setError(true)
+      return 
+    }
       const request=await axios.post("https://64df43e871c3335b25825a9f.mockapi.io/curd-operation",Input)
       const response=request.data
       localStorage.setItem('userData',JSON.stringify([response]))
@@ -98,6 +103,7 @@ export default function Register() {
                   label="Full Name"
                   autoFocus
                 />
+                     {(Error && !Input.name) && <span style={{color:'red'}}>please fill this input field</span>}
               </Grid>
              
               <Grid item xs={12}>
@@ -111,6 +117,7 @@ export default function Register() {
                   name="email"
                   autoComplete="email"
                 />
+                     {(Error && !Input.email) && <span style={{color:'red'}}>please fill this input field</span>}
               </Grid>
               <Grid item xs={12}>
                 <TextField
@@ -124,6 +131,7 @@ export default function Register() {
                   id="password"
                   autoComplete="new-password"
                 />
+                     {(Error && !Input.password) && <span style={{color:'red'}}>please fill this input field</span>}
               </Grid>
               <Grid item xs={12}>
                 <FormControlLabel
