@@ -9,9 +9,11 @@ This project is a Kanban board application developed using React JS. It allows u
 - Drag and Drop (React DnD)
 - MUI (Material UI)
 - Router
+- Protected Routing
+- Rest Api
 
 ## Features
-
+- Login Credentail and Signup Credential.
 - Drag and drop functionality to move tasks between columns.
 - Create, update, and delete tasks within each column.
 - Customize column names and add new columns.
