@@ -37,6 +37,7 @@ export default function Login() {
     password:""
   })
   const navigate=useNavigate()
+  const [Error,setError]=useState(false)
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
@@ -54,6 +55,10 @@ export default function Login() {
 
   const handleLogin= async (e)=>{
      e.preventDefault()
+     if(!Input.email || !Input.password){
+      setError(true)
+      return
+     }
      const reuqest=await axios.post("https://64df43e871c3335b25825a9f.mockapi.io/curd-operation",Input)
      const response=reuqest.data
      localStorage.setItem('userData',JSON.stringify([response]))
@@ -94,6 +99,7 @@ export default function Login() {
               autoComplete="email"
               autoFocus
             />
+                   {(Error && !Input.email) && <span style={{color:'red'}}>please fill this input field</span>}
             <TextField
               margin="normal"
               required
@@ -110,6 +116,7 @@ export default function Login() {
               control={<Checkbox value="remember" color="primary" />}
               label="Remember me"
             />
+                   {(Error && !Input.password) && <span style={{color:'red'}}>please fill this input field</span>}
             <Button
               type="submit"
               fullWidth
